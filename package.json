@@ -1,0 +1,25 @@
+{
+  "name": "api-filmes",
+  "version": "1.0.0",
+  "description": "Projeto pessoal criado para estudo e prática, com base no curso DevQuest.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tsx watch src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandre-fb/api-filmes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandre-fb/api-filmes/issues"
+  },
+  "homepage": "https://github.com/alexandre-fb/api-filmes#readme",
+  "devDependencies": {
+    "@types/node": "^20.3.1",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.3"
+  }
+}
