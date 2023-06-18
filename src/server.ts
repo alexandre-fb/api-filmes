@@ -7,7 +7,15 @@ const prisma = new PrismaClient();
 
 app.get("/movies",async (req, res) => {
     //busca os filmes do model movies
-    const movies = await prisma.movie.findMany();
+    const movies = await prisma.movie.findMany({
+        orderBy: {
+            title: "asc"
+        },
+        include: {
+            genres: true, //Adiciona todos os dados da tabela genres
+            languages: true //Adiciona todos os dados da tabela languages
+        }
+    });
     //retorna os dados como json
     res.json(movies);
 });
@@ -15,3 +23,4 @@ app.get("/movies",async (req, res) => {
 app.listen(port, () => {
     console.log(`Servidor em execucao na porta ${port}`);
 });
+ 
